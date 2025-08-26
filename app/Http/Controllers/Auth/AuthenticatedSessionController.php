@@ -28,6 +28,12 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
+        if (! $request->user()->hasVerifiedEmail()) {
+            // Auth::logout();
+            return redirect()->route('verification.notice')
+                ->with('status', 'Email belum diverifikasi. Cek inbox untuk link verifikasi.');
+        }
+
         return redirect()->intended(route('dashboard', absolute: false));
     }
 
