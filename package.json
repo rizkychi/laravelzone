@@ -19,6 +19,11 @@
     },
     "dependencies": {
         "@popperjs/core": "^2.11.8",
-        "bootstrap": "^5.3.8"
+        "apexcharts": "^5.3.4",
+        "bootstrap": "^5.3.8",
+        "feather-icons": "^4.29.2",
+        "flatpickr": "^4.6.13",
+        "node-waves": "^0.7.6",
+        "simplebar": "^6.3.2"
     }
 }

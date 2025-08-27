@@ -7,8 +7,6 @@
     {{-- Vite assets --}}
     @vite(['resources/css/app.css','resources/js/app.js'])
 
-    <script src="{{ asset('assets/js/layout.js') }}"></script>
-
     {{-- Head CSS --}}
     @include("partials/head-css")
 
@@ -57,12 +55,8 @@
     {{-- Vendor Scripts --}}
     @include("partials/vendor-scripts")
 
-    <script src="{{ asset('assets/js/plugins.js') }}"></script>
-
     {{-- Page Specific Scripts --}}
     @stack('scripts')
-
-    <script src="{{ asset('assets/js/app.js') }}"></script>
 </body>
 
 </html>

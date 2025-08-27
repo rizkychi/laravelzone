@@ -196,7 +196,7 @@
                     <div data-simplebar class="mx-n3 px-3" style="height: 375px;">
                         <div class="vstack gap-3">
                             <div class="d-flex gap-3">
-                                <img src="assets/images/users/avatar-3.jpg" alt=""
+                                <img src="{{ Vite::asset('resources/images/users/avatar-3.jpg') }}" alt=""
                                     class="avatar-sm rounded flex-shrink-0">
                                 <div class="flex-shrink-1">
                                     <h6 class="mb-2">Diana Kohler <span class="text-muted">Has commented</span></h6>
@@ -205,7 +205,7 @@
                                 </div>
                             </div>
                             <div class="d-flex gap-3">
-                                <img src="assets/images/users/avatar-5.jpg" alt=""
+                                <img src="{{ Vite::asset('resources/images/users/avatar-5.jpg') }}" alt=""
                                     class="avatar-sm rounded flex-shrink-0">
                                 <div class="flex-shrink-1">
                                     <h6 class="mb-2">Tonya Noble <span class="text-muted">Has commented</span></h6>
@@ -215,7 +215,7 @@
                                 </div>
                             </div>
                             <div class="d-flex gap-3">
-                                <img src="assets/images/users/avatar-6.jpg" alt=""
+                                <img src="{{ Vite::asset('resources/images/users/avatar-6.jpg') }}" alt=""
                                     class="avatar-sm rounded flex-shrink-0">
                                 <div class="flex-shrink-1">
                                     <h6 class="mb-2">Donald Palmer <span class="text-muted">Has commented</span>
@@ -225,7 +225,7 @@
                                 </div>
                             </div>
                             <div class="d-flex gap-3">
-                                <img src="assets/images/users/avatar-7.jpg" alt=""
+                                <img src="{{ Vite::asset('resources/images/users/avatar-7.jpg') }}" alt=""
                                     class="avatar-sm rounded flex-shrink-0">
                                 <div class="flex-shrink-1">
                                     <h6 class="mb-2">Joseph Parker <span class="text-muted">Has commented</span>
@@ -235,7 +235,7 @@
                                 </div>
                             </div>
                             <div class="d-flex gap-3">
-                                <img src="assets/images/users/avatar-9.jpg" alt=""
+                                <img src="{{ Vite::asset('resources/images/users/avatar-9.jpg') }}" alt=""
                                     class="avatar-sm rounded flex-shrink-0">
                                 <div class="flex-shrink-1">
                                     <h6 class="mb-2">Timothy Smith <span class="text-muted">Has commented</span>
@@ -245,7 +245,7 @@
                                 </div>
                             </div>
                             <div class="d-flex gap-3">
-                                <img src="assets/images/users/avatar-10.jpg" alt=""
+                                <img src="{{ Vite::asset('resources/images/users/avatar-10.jpg') }}" alt=""
                                     class="avatar-sm rounded flex-shrink-0">
                                 <div class="flex-shrink-1">
                                     <h6 class="mb-2">Alexis Clarke <span class="text-muted">Has commented</span>
@@ -255,7 +255,7 @@
                                 </div>
                             </div>
                             <div class="d-flex gap-3">
-                                <img src="assets/images/users/avatar-2.jpg" alt=""
+                                <img src="{{ Vite::asset('resources/images/users/avatar-2.jpg') }}" alt=""
                                     class="avatar-sm rounded flex-shrink-0">
                                 <div class="flex-shrink-1">
                                     <h6 class="mb-2">Thomas Taylor <span class="text-muted">Has commented</span>
@@ -309,8 +309,6 @@
                                 <tr>
                                     <td>01</td>
                                     <td>
-                                        <img src="assets/images/blog/img-2.jpg" alt="" class="me-2 rounded"
-                                            height="40">
                                         <a href="#!" class="text-body fw-medium">The Evolution of Minimalism in
                                             Design</a>
                                     </td>
@@ -325,8 +323,6 @@
                                 <tr>
                                     <td>02</td>
                                     <td>
-                                        <img src="assets/images/blog/img-3.jpg" alt="" class="me-2 rounded"
-                                            height="40">
                                         <a href="#!" class="text-body fw-medium">Mastering User Experience
                                             Through Storytelling</a>
                                     </td>
@@ -340,8 +336,6 @@
                                 <tr>
                                     <td>03</td>
                                     <td>
-                                        <img src="assets/images/blog/img-4.jpg" alt="" class="me-2 rounded"
-                                            height="40">
                                         <a href="#!" class="text-body fw-medium">Designing for Purpose: A Mindful
                                             Approach</a>
                                     </td>
@@ -356,8 +350,6 @@
                                 <tr>
                                     <td>04</td>
                                     <td>
-                                        <img src="assets/images/blog/img-5.jpg" alt="" class="me-2 rounded"
-                                            height="40">
                                         <a href="#!" class="text-body fw-medium">How to Overcome Creative
                                             Block</a>
                                     </td>
@@ -372,8 +364,6 @@
                                 <tr>
                                     <td>05</td>
                                     <td>
-                                        <img src="assets/images/blog/img-6.jpg" alt="" class="me-2 rounded"
-                                            height="40">
                                         <a href="#!" class="text-body fw-medium">Building Brand Identity through
                                             Design</a>
                                     </td>
@@ -424,7 +414,7 @@
                         <div class="card-body">
                             <div class="d-flex">
                                 <div class="flex-shrink-0 me-3">
-                                    <img src="assets/images/users/avatar-1.jpg" alt=""
+                                    <img src="{{ Vite::asset('resources/images/users/avatar-1.jpg') }}" alt=""
                                         class="avatar-sm rounded-circle img-thumbnail">
                                 </div>
                                 <div class="flex-grow-1">
@@ -502,7 +492,5 @@
     </div><!--end row-->
 
     @push('scripts')
-        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-        <script src="assets/js/pages/dashboard-blog.init.js"></script>
     @endpush
 </x-velzon-layout>
