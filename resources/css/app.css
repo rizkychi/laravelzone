@@ -1,3 +1,8 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+@import "../velzone/css/bootstrap.min.css";
+@import "../velzone/css/icons.min.css";
+@import "../velzone/css/app.min.css";
+@import "../velzone/css/custom.min.css";
