@@ -20,5 +20,8 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
             'password' => bcrypt('password'),
         ]);
+
+        // Run Another Seeder
+        $this->call(RoleSeeder::class);
     }
 }

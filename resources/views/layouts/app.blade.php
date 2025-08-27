@@ -27,6 +27,9 @@
                 </header>
             @endisset
 
+            {{-- Sidebar --}}
+            <x-sidebar />
+
             <!-- Page Content -->
             <main>
                 {{ $slot }}
