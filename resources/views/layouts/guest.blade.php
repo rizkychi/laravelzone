@@ -6,9 +6,11 @@
     @include("partials/title-meta")
 
     {{-- Vite assets --}}
-    @vite(['resources/css/app.css','resources/js/app.js'])
-
-    <script src="{{ asset('assets/js/layout.js') }}"></script>
+    @vite([
+        'resources/css/app.css',
+        'resources/js/app.js',
+        'resources/js/pages/particles.app.js',
+    ])
 
     {{-- Head CSS --}}
     @include("partials/head-css")
@@ -17,7 +19,7 @@
     @stack('styles')
 </head>
 
-<body>
+<body data-page="@yield('page')">
 
     <div class="auth-page-wrapper pt-5">
         <!-- auth page bg -->
@@ -61,14 +63,8 @@
     {{-- Vendor Scripts --}}
     @include("partials/vendor-scripts")
 
-    <script src="{{ asset('assets/js/plugins.js') }}"></script>
-
     <!-- particles js -->
-    <script src="assets/libs/particles.js/particles.js"></script>
-    <!-- particles app js -->
-    <script src="assets/js/pages/particles.app.js"></script>
-    <!-- password-addon init -->
-    <script src="assets/js/pages/password-addon.init.js"></script>
+    <script src="{{ asset('assets/libs/particles.js/particles.js') }}"></script>
 </body>
 
 </html>

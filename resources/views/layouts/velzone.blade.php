@@ -5,7 +5,12 @@
     @include("partials/title-meta")
 
     {{-- Vite assets --}}
-    @vite(['resources/css/app.css','resources/js/app.js'])
+    @vite([
+        'resources/css/app.css',
+        'resources/js/app.js',
+        'resources/js/main.js',
+        'resources/js/pages/dashboard-blog.init.js',
+    ])
 
     {{-- Head CSS --}}
     @include("partials/head-css")

@@ -1,14 +1,13 @@
+@section('page', 'login')
+
 <x-guest-layout>
-    
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <div class="row">
         <div class="col-lg-12">
             <div class="text-center mt-sm-5 mb-4 text-white-50">
                 <div>
                     <a href="index.html" class="d-inline-block auth-logo">
-                        <img src="assets/images/logo-light.png" alt="" height="20">
+                        <img src="{{ Vite::asset('resources/images/logo-light.png') }}" alt="" height="20">
                     </a>
                 </div>
                 <p class="mt-3 fs-15 fw-medium">Premium Admin & Dashboard Template</p>
@@ -26,26 +25,39 @@
                         <h5 class="text-primary">Welcome Back !</h5>
                         <p class="text-muted">Sign in to continue to Velzon.</p>
                     </div>
+                    @if (session('status'))
+                        <div class="alert alert-success text-center mb-4" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
                     <div class="p-2 mt-4">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
 
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="{{ old('email') }}" required autofocus autocomplete="username">
-                                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                                <label for="username" class="form-label">Username/Email <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control @error('login') is-invalid @enderror" value="{{ old('login') }}" id="username" name="login" placeholder="Enter username or email">
+                                @error('login')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="mb-3">
                                 <div class="float-end">
                                     <a href="{{ route('password.request') }}" class="text-muted">Forgot password?</a>
                                 </div>
-                                <label class="form-label" for="password-input">Password</label>
+                                <label class="form-label" for="password-input">Password <span class="text-danger">*</span></label>
                                 <div class="position-relative auth-pass-inputgroup mb-3">
-                                    <input type="password" class="form-control pe-5 password-input" placeholder="Enter password" id="password-input" name="password" required autocomplete="current-password">
-                                    <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon material-shadow-none" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
+                                    <input type="password" class="form-control password-input pe-5 @error('password') is-invalid @enderror" name="password" placeholder="Enter password" id="password-input" value="">
+                                    <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
-                                <x-input-error :messages="$errors->get('password')" class="mt-2" />
                             </div>
 
                             <div class="form-check">
